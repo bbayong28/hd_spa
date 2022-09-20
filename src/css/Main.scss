@@ -1,0 +1,31 @@
+.Main{
+    position: relative;
+    .itm{
+        position: relative;
+        height: 600px;
+    }
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 1170px;
+    }
+    /*  @for $i from start to end : to 뒤에 오는 숫자 미만*/
+    /*  @for $i from start through end : throw 뒤에 오는 숫자 이하*/
+    @for $i from 1 through 3{
+        .itm0#{$i}{
+            background: url(../../public/assets/images/main_visual0#{$i}.jpg) no-repeat center center / cover;
+        }
+    }
+
+    .itm.on{
+        color: #fff;
+        transition: 1s;
+    }
+
+    .dots>li.on{
+        color: #f00;
+    }
+    
+}
